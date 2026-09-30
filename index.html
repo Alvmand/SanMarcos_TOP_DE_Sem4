@@ -1,0 +1,1050 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Historia · Semana 04 DE — Perú: siglo XIX e inicios del XX</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F3F4F1;
+  --sheet:#FFFFFF;
+  --ink:#000000;
+  --ink2:#4A504E;
+  --hair:#C9CCC6;
+  --mark:#C8102E;
+  --graph:#23282B;
+  --soft:#E7EAE3;
+  --ok:#1E6B3A;
+  --sans:"Archivo","Helvetica Neue",Arial,sans-serif;
+  --serif:"Newsreader",Georgia,"Times New Roman",serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#14171A; --sheet:#1B1F22; --ink:#F2F3EF; --ink2:#A7AFAC;
+    --hair:#3A4145; --mark:#FF6B6B; --graph:#F2F3EF; --soft:#252B2E;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#14171A; --sheet:#1B1F22; --ink:#F2F3EF; --ink2:#A7AFAC;
+  --hair:#3A4145; --mark:#FF6B6B; --graph:#F2F3EF; --soft:#252B2E;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{
+  background:var(--paper); color:var(--ink);
+  font-family:var(--sans);
+  display:grid; place-items:center; overflow:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+#viewport{position:relative;width:100vw;height:100vh;display:grid;place-items:center}
+#stage{
+  width:1280px;height:720px;position:relative;
+  background:var(--sheet);
+  box-shadow:0 0 0 1px var(--hair), 0 18px 60px rgba(0,0,0,.18);
+  overflow:hidden;
+}
+.slide{position:absolute;inset:0;display:none;flex-direction:column}
+.slide.on{display:flex}
+
+/* ---------- head band ---------- */
+.band{
+  display:flex;align-items:stretch;border-bottom:2px solid var(--ink);
+  flex:0 0 auto;
+}
+.band .num{
+  width:112px;flex:0 0 112px;background:var(--ink);color:var(--sheet);
+  display:flex;align-items:center;justify-content:center;
+  font-size:42px;font-weight:800;letter-spacing:-.02em;
+}
+.band .num.theory{background:var(--mark)}
+.band .meta{flex:1;display:flex;flex-direction:column;justify-content:center;padding:12px 26px;gap:2px}
+.band .bloque{font-size:13.5px;font-weight:600;color:var(--ink2);letter-spacing:.01em}
+.band .titulo{font-size:27px;font-weight:700;line-height:1.12;letter-spacing:-.015em}
+.band .brand{
+  flex:0 0 auto;display:flex;align-items:center;padding:0 24px;border-left:1px solid var(--hair);
+  font-size:12.5px;font-weight:600;color:var(--ink2);text-align:right;line-height:1.3;max-width:190px
+}
+
+/* ---------- body ---------- */
+.body{flex:1 1 auto;min-height:0;overflow:hidden;padding:20px 28px 16px}
+.fitwrap{transform-origin:top left;min-height:100%;display:flex;flex-direction:column}
+
+.qgrid{display:grid;grid-template-columns:465px 1fr;gap:0;flex:1 1 auto}
+.qleft{padding-right:26px;border-right:2px solid var(--ink)}
+.qright{padding-left:26px}
+
+.enun{font-family:var(--serif);font-size:18.5px;line-height:1.45;margin-bottom:14px}
+.enun em{font-style:italic}
+.alts{list-style:none;display:flex;flex-direction:column;gap:7px}
+.alt{display:flex;gap:10px;align-items:flex-start;font-size:16px;line-height:1.32;padding:4px 6px;border-radius:3px}
+.bub{
+  flex:0 0 auto;width:25px;height:25px;border-radius:50%;border:2px solid var(--ink);
+  display:grid;place-items:center;font-size:13.5px;font-weight:700;margin-top:-1px;
+  transition:background .18s ease,color .18s ease,border-color .18s ease,transform .18s ease;
+}
+.revealed .alt.hit{background:var(--soft)}
+.revealed .alt.hit .bub{background:var(--mark);border-color:var(--mark);color:#fff;transform:scale(1.12)}
+.revealed .alt.hit .txt{font-weight:600}
+
+.clavebox{
+  display:flex;align-items:center;gap:12px;border:2px solid var(--mark);
+  padding:8px 14px;margin-bottom:12px
+}
+.clavebox .lab{font-size:15px;font-weight:600;color:var(--ink2)}
+.clavebox .let{
+  width:34px;height:34px;border-radius:50%;background:var(--mark);color:#fff;
+  display:grid;place-items:center;font-size:19px;font-weight:800
+}
+.clavebox .why{font-size:15px;font-weight:600;line-height:1.25}
+
+h4.sec{font-size:14px;font-weight:700;margin:12px 0 6px;padding-bottom:3px;border-bottom:1px solid var(--hair)}
+h4.sec:first-child{margin-top:0}
+
+.tbl{width:100%;border-collapse:collapse;font-size:14.5px;line-height:1.3}
+.tbl th{
+  background:var(--graph);color:var(--sheet);text-align:left;
+  padding:5px 9px;font-size:13px;font-weight:600
+}
+.tbl td{padding:5px 9px;border-bottom:1px solid var(--hair);vertical-align:top}
+.tbl td.k{font-weight:600;white-space:nowrap}
+.tbl tr:last-child td{border-bottom:0}
+.tbl.wide td.k{white-space:normal}
+.tbl.mini{font-size:13.5px}
+.tbl.mini th,.tbl.mini td{padding:4px 7px}
+
+.v{display:inline-block;min-width:17px;text-align:center;font-weight:800;color:var(--ok)}
+.f{display:inline-block;min-width:17px;text-align:center;font-weight:800;color:var(--mark)}
+b.hl{background:linear-gradient(transparent 62%, rgba(200,16,46,.28) 62%);font-weight:700}
+
+.nota{
+  margin-top:10px;font-size:14px;line-height:1.35;padding:8px 11px;background:var(--soft);
+  border-left:3px solid var(--mark)
+}
+.nota b{font-weight:700}
+
+.reveal{opacity:0;transform:translateY(6px);transition:opacity .22s ease,transform .22s ease}
+.revealed .reveal{opacity:1;transform:none}
+.hintrev{
+  position:absolute;right:30px;bottom:44px;font-size:13px;color:var(--ink2);
+  border:1px dashed var(--hair);padding:5px 10px
+}
+.revealed .hintrev{display:none}
+
+/* ---------- theory layouts ---------- */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start}
+.three{display:grid;grid-template-columns:1fr 1fr 1fr;gap:18px;align-items:start}
+.two>div,.three>div{display:flex;flex-direction:column}
+.fitwrap>*+*{margin-top:0}
+.stack{display:flex;flex-direction:column;gap:12px}
+.lead{font-family:var(--serif);font-size:17.5px;line-height:1.45;margin-bottom:12px}
+
+/* ---------- cover ---------- */
+.cover{padding:0}
+.cover .top{flex:1 1 auto}
+.cover .top{padding:60px 70px 0;display:flex;flex-direction:column;justify-content:center}
+.kicker{font-size:17px;font-weight:600;color:var(--ink2);margin-bottom:14px}
+.cover h1{font-size:74px;font-weight:800;line-height:.98;letter-spacing:-.03em;max-width:15ch}
+.cover h1 span{display:block}
+.rulebig{height:8px;background:var(--mark);width:220px;margin:26px 0 22px}
+.cover .sub{font-size:20px;line-height:1.45;max-width:58ch;font-family:var(--serif)}
+.cover .bot{border-top:2px solid var(--ink);display:flex;justify-content:space-between;align-items:center;padding:16px 70px;font-size:14.5px;font-weight:600;color:var(--ink2)}
+.keysgrid{display:grid;grid-template-columns:repeat(13,1fr);gap:6px}
+.keycell{border:1.5px solid var(--ink);display:flex;flex-direction:column;align-items:center;padding:5px 0}
+.keycell .n{font-size:12px;color:var(--ink2);font-weight:600}
+.keycell .a{font-size:21px;font-weight:800;color:var(--mark)}
+
+/* ---------- chrome ---------- */
+#bar{
+  position:fixed;left:0;right:0;bottom:0;height:40px;display:flex;align-items:center;gap:10px;
+  padding:0 14px;background:var(--paper);
+  border-top:1px solid var(--hair);font-size:13px;z-index:20
+}
+#bar button{
+  font-family:var(--sans);font-size:13px;font-weight:600;color:var(--ink);
+  background:transparent;border:1px solid var(--hair);padding:5px 10px;cursor:pointer
+}
+#bar button:hover{background:var(--soft)}
+#bar button:focus-visible{outline:2px solid var(--mark);outline-offset:2px}
+#count{font-weight:700;min-width:70px}
+#prog{position:fixed;top:0;left:0;height:3px;background:var(--mark);z-index:30;transition:width .2s ease}
+#idx{
+  position:fixed;inset:0;background:var(--paper);z-index:40;display:none;
+  padding:26px 30px 60px;overflow:auto
+}
+#idx.on{display:block}
+#idx h3{font-size:20px;margin-bottom:14px}
+#idxlist{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+#idxlist button{
+  text-align:left;font-family:var(--sans);font-size:13px;line-height:1.25;padding:8px 10px;
+  border:1px solid var(--hair);background:var(--sheet);color:var(--ink);cursor:pointer
+}
+#idxlist button:hover{border-color:var(--mark)}
+#idxlist button b{display:block;font-size:11px;color:var(--mark);margin-bottom:2px}
+@media (prefers-reduced-motion: reduce){*{transition:none!important}}
+@media (max-width:700px){#bar{font-size:12px}}
+</style>
+</head>
+<body>
+<div id="prog"></div>
+<div id="viewport"><div id="stage"></div></div>
+<div id="bar">
+  <button id="prev">&larr; Anterior</button>
+  <button id="next">Siguiente &rarr;</button>
+  <span id="count">1 / 1</span>
+  <button id="revall">Mostrar todas las claves</button>
+  <button id="openidx">Índice</button>
+  <button id="fs">Pantalla completa</button>
+  <span style="margin-left:auto;color:var(--ink2)">Espacio o &rarr;: avanza y revela · V: claves · I: índice</span>
+</div>
+<div id="idx"><h3>Índice de la sesión</h3><div id="idxlist"></div></div>
+
+<script>
+/* ============================================================
+   HELPERS
+   ============================================================ */
+var V='<span class="v">V</span>', F='<span class="f">F</span>';
+function T(head, rows, cls){
+  var h = head ? '<thead><tr>'+head.map(function(x){return '<th>'+x+'</th>'}).join('')+'</tr></thead>' : '';
+  var b = rows.map(function(r){
+    return '<tr>'+r.map(function(c,i){return '<td'+(i===0?' class="k"':'')+'>'+c+'</td>'}).join('')+'</tr>';
+  }).join('');
+  return '<table class="tbl '+(cls||'')+'">'+h+'<tbody>'+b+'</tbody></table>';
+}
+function S(t){return '<h4 class="sec">'+t+'</h4>'}
+function N(t){return '<div class="nota">'+t+'</div>'}
+
+/* ============================================================
+   CONTENIDO
+   ============================================================ */
+var SLIDES = [];
+
+SLIDES.push({type:'cover'});
+
+SLIDES.push({type:'t', bloque:'Ruta de la sesión', titulo:'Qué vamos a resolver hoy', html:
+  '<div class="lead">25 preguntas que recorren siglo y medio: de las rebeliones anticoloniales al Oncenio. Cada una se resuelve con el dato exacto que la UNMSM suele pedir.</div>'+
+  T(['Bloque','Preguntas','Lo que se evalúa'],[
+    ['Crisis del orden colonial','1 a 4','Consecuencias de Túpac Amaru II, mesianismo andino, rebeliones criollas y pactismo de 1808'],
+    ['Independencia','5 a 9','Punchauca, Sociedad Patriótica, dictadura de Bolívar, montoneras y doctrina Monroe'],
+    ['Primer Militarismo','10 a 13','Caudillismo, inestabilidad y Confederación Perú-Boliviana'],
+    ['Prosperidad Falaz y civilismo','14 a 17','Consignaciones, hermanos Gutiérrez, debate sobre el sufragio y gobierno de Manuel Pardo'],
+    ['Guerra y reconstrucción','18 y 19','Causas del conflicto de 1879 y Contrato Grace'],
+    ['República Aristocrática y Oncenio','20 a 25','Oligarquía, mecanismos del Partido Civil, movimiento obrero y capital extranjero']
+  ],'wide')+
+  N('Preguntas de examen real en esta práctica: <b>UNMSM 2021-I</b> (4), <b>2025-I</b> (5) y <b>2025-II</b> (24).')
+});
+
+SLIDES.push({type:'t', bloque:'Rebeliones anticoloniales', titulo:'Las dos grandes rebeliones del siglo XVIII', html:
+  T(['','Juan Santos Atahualpa (1742-1756)','Túpac Amaru II (1780-1781)'],[
+    ['Espacio','Ceja de selva de Junín: Gran Pajonal, Chanchamayo y Tarma.','Corregimiento de <b>Tinta</b>, Cusco; se extiende al sur andino y al Alto Perú.'],
+    ['Quién lidera','Se proclama descendiente de Atahualpa; formación jesuita.','José Gabriel Condorcanqui, <b>cacique</b> de Tungasuca y arriero.'],
+    ['Causas','Misiones franciscanas que fundaron haciendas y 27 reducciones sobre asháninkas (campas), shipibos, conibos y piros.','Reparto mercantil, alza de la alcabala, aduanas interiores y pérdida de privilegios de los curacas.'],
+    ['Base social','Etnias amazónicas y algunos mestizos y negros cimarrones.','Indígenas, mestizos y criollos del sur; luego se fractura por el temor criollo.'],
+    ['Desenlace','<b class="hl">Expulsó a los españoles de la Selva Central</b> y nunca fue derrotado: desaparece hacia 1756.','Ejecuta al corregidor Arriaga, vence en Sangarará, es derrotado en Checacupe y ejecutado en el Cusco (1781).'],
+    ['Consecuencias','La Selva Central queda fuera del control colonial por varias décadas.','Abolición del cacicazgo y del reparto, creación de las intendencias (1784) y de la Audiencia del Cusco (1787); prohibición de los <i>Comentarios Reales</i>.']
+  ],'wide')
+});
+
+SLIDES.push({type:'q', n:1, bloque:'Crisis del orden colonial', titulo:'La reorganización territorial tras Túpac Amaru II',
+  enun:'Una de las consecuencias de la rebelión de Túpac Amaru II fue la reorganización de la administración territorial colonial. Los desprestigiados _______ fueron eliminados y en su lugar se establecieron las _______.',
+  alts:['cabildos - capitanías.','corregimientos - intendencias.','corregimientos - capitanías.','obrajes - intendencias.','cabildos - intendencias.'],
+  clave:1, why:'Cae el corregimiento; entra la intendencia.',
+  an: T(['Qué se elimina','Por qué'],[
+    ['Corregimiento','Estaba <b class="hl">desprestigiado por el reparto mercantil</b>: el corregidor era la cara del abuso y la causa directa de la rebelión.'],
+    ['Cacicazgo','Se suprime también, porque Túpac Amaru II era curaca: la Corona ya no confía en los intermediarios indígenas.']
+  ],'wide')+
+  S('Qué se crea')+
+  T(['Institución','Año','Rasgo'],[
+    ['Intendencia','1784','Ocho en el Perú, a cargo de funcionarios <b>peninsulares de carrera</b>. Los antiguos corregimientos pasan a ser subdelegaciones.'],
+    ['Audiencia del Cusco','1787','Descentraliza la justicia y vigila de cerca al sur andino.']
+  ])+
+  N('Descartes: los <b>cabildos</b> nunca se eliminaron; las <b>capitanías generales</b> (Chile y Venezuela) son unidades de defensa y no reemplazaron a los corregimientos; los <b>obrajes</b> son talleres textiles, no circunscripciones.')
+});
+
+SLIDES.push({type:'q', n:2, bloque:'Crisis del orden colonial', titulo:'El mito de Inkarri',
+  enun:'El mito de Inkarri sostenía que un descendiente de los incas regresaría para destruir el orden colonial e instaurar nuevamente el Tahuantinsuyo, convirtiéndose en el soporte de las rebeliones indígenas del siglo XVIII. ¿Cómo se denomina esta visión andina?',
+  alts:['Ilustración','Regalismo','Despotismo ilustrado','Indigenismo','Mesianismo andino'],
+  clave:4, why:'La espera del retorno del Inca salvador.',
+  an: T(['Concepto','Contenido'],[
+    ['Mesianismo andino','Creencia en el retorno de un <b class="hl">salvador</b> que restaurará el orden roto por la conquista.'],
+    ['Mito de Inkarri','El cuerpo del Inca decapitado se reconstituye bajo tierra; cuando esté completo, volverá y acabará con el mundo colonial.'],
+    ['Utopía andina','Nombre que Alberto Flores Galindo da a esa proyección del pasado incaico como futuro deseable.'],
+    ['Combustible político','Alimentó las rebeliones del siglo XVIII; por eso la Corona prohibió los <i>Comentarios Reales</i> tras 1781.']
+  ],'wide')+
+  S('Los distractores son conceptos de otro registro')+
+  T(null,[
+    ['Ilustración y despotismo ilustrado','Corrientes <b>europeas</b> del siglo XVIII: razón, ciencia y reforma desde arriba.'],
+    ['Regalismo','Doctrina de la supremacía del rey sobre la Iglesia.'],
+    ['Indigenismo','Corriente <b>intelectual y artística del siglo XX</b>: Valcárcel, Mariátegui, Arguedas. Anacrónico aquí.']
+  ],'wide')
+});
+
+SLIDES.push({type:'t', bloque:'Precursores', titulo:'Los criollos frente a las reformas borbónicas', html:
+  '<div class="two"><div>'+
+  S('Las dos posturas criollas')+
+  T(['Postura','Qué plantea','Quiénes'],[
+    ['Reformista o fidelista','Corregir los abusos <b>sin romper</b> con España; más participación criolla en los cargos.','Hipólito Unanue, José Baquíjano y Carrillo, Toribio Rodríguez de Mendoza.'],
+    ['Separatista','<b class="hl">Independencia</b> frente a España.','Juan Pablo Vizcardo y Guzmán.']
+  ])+
+  S('El espacio reformista')+
+  T(null,[
+    ['Sociedad de Amantes del País','Fundada en 1790; publica el <i>Mercurio Peruano</i>: difunde los recursos, las regiones y los problemas del virreinato.'],
+    ['Centros de estudio','Convictorio de San Carlos (carolinos) y Escuela de Medicina de San Fernando (fernandinos).']
+  ],'wide')+
+  '</div><div>'+
+  S('Vizcardo y Guzmán')+
+  T(['Dato','Contenido'],[
+    ['Quién fue','Jesuita expulsado del Perú en 1767 junto con toda la Compañía de Jesús.'],
+    ['Obra','<i>Carta a los españoles americanos</i>, escrita en <b>1792</b>.'],
+    ['Argumento','España trató a los criollos como extranjeros en su propia tierra: el Nuevo Mundo es nuestra patria.'],
+    ['Difusión','Francisco de Miranda la publica y la reparte: se convierte en el manifiesto de los separatistas.']
+  ],'wide')+
+  S('Rebeliones criollas del siglo XIX')+
+  T(null,[
+    ['1811','Francisco de Zela, en Tacna.'],
+    ['1812','Juan José Crespo y Castillo, en Huánuco.'],
+    ['1814','Hermanos Angulo y Mateo Pumacahua, en el Cusco: la más amplia.']
+  ],'wide')+
+  '</div></div>'
+});
+
+SLIDES.push({type:'q', n:3, bloque:'Crisis del orden colonial', titulo:'Conspiraciones y rebeliones criollas',
+  enun:'Sobre las conspiraciones y rebeliones criollas de fines del siglo XVIII e inicios del XIX, identifique los enunciados correctos.',
+  alts:['FVV','VFV','FFV','VVV','FVF'],
+  clave:0, why:'Pumacahua terminó del lado de los Angulo.',
+  an: T(['Proposición','Análisis'],[
+    ['I. Mateo Pumacahua luchó <b>en contra</b> de la rebelión de los hermanos Angulo',F+' <b class="hl">Se unió a ellos</b> en 1814 y encabezó la campaña militar. La confusión nace de su pasado: en 1781 sí había combatido a Túpac Amaru II al servicio del rey.'],
+    ['II. Vizcardo y Guzmán y Francisco de Zela eran criollos separatistas',V+' Vizcardo con la <i>Carta a los españoles americanos</i> (1792) y Zela con la rebelión de Tacna (1811).'],
+    ['III. El virrey Abascal combatió exitosamente las rebeliones criollas',V+' Convirtió a Lima en el <b>bastión contrarrevolucionario</b> de Sudamérica: sofocó Quito, Chile y el Alto Perú, además de Tacna, Huánuco y el Cusco.']
+  ],'wide')+
+  N('Trayectoria de Pumacahua en una línea: <b>realista en 1781, realista en 1811, insurgente en 1814</b>. Sirve para mostrar que las lealtades coloniales no eran fijas, sino cálculos de posición.')
+});
+
+SLIDES.push({type:'t', bloque:'Crisis de la monarquía', titulo:'1808: pactismo, juntas y Cortes de Cádiz', html:
+  '<div class="two"><div>'+
+  S('La crisis')+
+  T(['Hecho','Contenido'],[
+    ['Invasión napoleónica (1808)','Abdicaciones de Bayona: Carlos IV y Fernando VII entregan la corona; José Bonaparte es impuesto como rey.'],
+    ['Acefalía','El Imperio se queda <b>sin rey legítimo</b>: nadie reconoce al invasor.'],
+    ['Pactismo','Doctrina tradicional hispana: la autoridad del rey nace de un <b class="hl">pacto</b> con sus vasallos. Sin rey, la soberanía <b>revierte a los pueblos</b>.']
+  ],'wide')+
+  S('Las juntas de gobierno')+
+  T(null,[
+    ['En España','Juntas provinciales, Junta Central y Consejo de Regencia.'],
+    ['En América','Caracas, Buenos Aires, Quito, Chuquisaca, Santiago y otras, todas <b>jurando fidelidad a Fernando VII</b>: es la llamada "máscara de Fernando VII".'],
+    ['En Lima','No hubo junta: el virrey Abascal organizó la represión de las demás.']
+  ],'wide')+
+  '</div><div>'+
+  S('Cortes de Cádiz (1810-1814)')+
+  T(['Aspecto','Contenido'],[
+    ['Qué son','Asamblea reunida en Cádiz con diputados peninsulares y <b>americanos</b>, incluido el Perú.'],
+    ['Constitución de 1812','Primera constitución liberal española: soberanía nacional, división de poderes, libertad de imprenta e igualdad jurídica de españoles y criollos.'],
+    ['Medidas','Abolición del tributo indígena, de la mita y de la Inquisición; creación de ayuntamientos constitucionales.'],
+    ['Final','Fernando VII regresa en 1814, <b class="hl">anula la Constitución</b> y restaura el absolutismo: cierra la vía reformista y empuja a los criollos al separatismo.']
+  ])+
+  '</div></div>'
+});
+
+SLIDES.push({type:'q', n:4, bloque:'Crisis de la monarquía', titulo:'El pactismo de 1808',
+  enun:'El texto sostiene que la autoridad de los reyes nacía de un pacto: los monarcas defendían sus reinos y los fueros de sus vasallos, y estos les juraban obediencia. Ante la ausencia del rey legítimo, el mismo pacto mandaba que la soberanía recayese en los vasallos. En virtud del párrafo, se puede inferir que',
+  alts:['solo III','I y II','I y IV','I, III y IV','&mdash;'],
+  clave:2, why:'Soberanía de los pueblos y fidelidad a Fernando VII.',
+  an: T(['Proposición','Análisis'],[
+    ['I. Las ideas pactistas fortalecieron la soberanía de los pueblos hispanos en la Península y en América',V+' Es exactamente lo que dice el texto: sin rey, la soberanía vuelve a los vasallos, <b>a ambos lados del Atlántico</b>.'],
+    ['II. Las juntas rechazaron a Napoleón por convocar un pacto que no reconocía sus derechos',F+' El texto dice que Napoleón <b class="hl">desconoció</b> el principio pactista, no que convocara pacto alguno. La proposición distorsiona la lectura.'],
+    ['III. La acefalía llevó a depositar la soberanía sin reconocer la legitimidad de Fernando VII',F+' El texto afirma lo contrario: "al tanto se juró fidelidad al cautivo". <b>Sí lo reconocieron</b>.'],
+    ['IV. Los americanos reconocieron la legitimidad de Fernando VII y rechazaron al invasor francés',V+' Es la "máscara de Fernando VII": se gobierna en su nombre mientras está preso.']
+  ],'wide')+
+  N('Pregunta de <b>comprensión lectora</b> (UNMSM 2021-I): todo se resuelve dentro del texto. La alternativa E aparece en blanco en el folleto; las opciones reales son las cuatro primeras.')
+});
+
+SLIDES.push({type:'t', bloque:'Independencia', titulo:'El Protectorado de San Martín (1821-1822)', html:
+  '<div class="two"><div>'+
+  S('Medidas políticas')+
+  T(null,[
+    ['Estatuto Provisional (1821)','Norma de gobierno mientras se instalaba el Congreso.'],
+    ['Proyecto de gobierno','<b class="hl">Monarquía constitucional</b>: la Sociedad Patriótica debate la forma de Estado.'],
+    ['Misión García del Río - Paroissien','Viaja a Europa a buscar un <b>príncipe</b> para el trono peruano.'],
+    ['Símbolos','Bandera, escudo e himno nacional.']
+  ],'wide')+
+  S('Medidas sociales')+
+  T(null,[
+    ['Ley de Vientres','Libertad para los hijos de esclavos nacidos desde el <b>28 de julio de 1821</b>. No liberó a los esclavos ya nacidos.'],
+    ['Población indígena','Abolición del <b>tributo indígena</b> y de la mita: "no se llamarán más indios, son peruanos".']
+  ],'wide')+
+  '</div><div>'+
+  S('Medidas económicas y culturales')+
+  T(null,[
+    ['Libre comercio','Apertura de los puertos y fin del monopolio español.'],
+    ['Empréstitos','Préstamos de comerciantes <b>ingleses</b>: inicio de la deuda externa peruana.'],
+    ['Cultura','Biblioteca Nacional (1821) y Escuela Normal.']
+  ],'wide')+
+  S('La Entrevista de Guayaquil (julio de 1822)')+
+  T(['Tema','Postura'],[
+    ['Guayaquil','Bolívar ya la había anexado a la Gran Colombia: hecho consumado.'],
+    ['Forma de gobierno','San Martín: monarquía constitucional. Bolívar: república.'],
+    ['Punto central','<b class="hl">El apoyo militar</b> que Bolívar daría para terminar la guerra en el Perú. Bolívar ofrece muy poco.'],
+    ['Resultado','San Martín se retira del Perú en septiembre de 1822.']
+  ])+
+  '</div></div>'
+});
+
+SLIDES.push({type:'q', n:5, bloque:'Independencia', titulo:'La conferencia de Punchauca',
+  enun:'El último intento del protector José de San Martín de convencer al virrey La Serna de que acepte el proyecto de establecer en el Perú una monarquía constitucional, asumida por un príncipe español, se realizó en la conferencia de',
+  alts:['Guayaquil.','Miraflores.','Punchauca.','Aznapuquio.','Huaura.'],
+  clave:2, why:'Punchauca (1821): San Martín negocia con La Serna.',
+  an: T(['Lugar','Qué ocurrió ahí'],[
+    ['Punchauca (mayo-junio de 1821)','<b class="hl">Negociación con el virrey La Serna</b>: San Martín propone una monarquía constitucional con un príncipe español y una regencia mixta. Fracasa.'],
+    ['Miraflores (1820)','Negociación anterior, con el virrey <b>Pezuela</b>: también fracasó.'],
+    ['Aznapuquio (1821)','<b>Motín de los generales realistas</b> que depusieron a Pezuela y pusieron a La Serna en su lugar.'],
+    ['Huaura','Cuartel general de San Martín en el norte chico, donde proclamó por primera vez la independencia.'],
+    ['Guayaquil (1822)','Entrevista con <b>Bolívar</b>, no con los realistas.']
+  ],'wide')+
+  N('Ordena la secuencia: Miraflores (con Pezuela) &rarr; Aznapuquio (cambio de virrey) &rarr; Punchauca (con La Serna) &rarr; Guayaquil (con Bolívar). Pregunta tomada del examen <b>UNMSM 2025-I</b>.')
+});
+
+SLIDES.push({type:'q', n:6, bloque:'Independencia', titulo:'La Sociedad Patriótica',
+  enun:'Durante el protectorado de San Martín se creó la Sociedad Patriótica. Esta institución tenía por objetivo promover el debate sobre',
+  alts:['los símbolos patrios que debían estimular la guerra contra los realistas.','la renovación de los títulos de Castilla que estaban en manos de la élite criolla.','los límites que debían tener los tres poderes del Estado.','la forma de gobierno que debía tener el Perú independiente.','la participación de los analfabetos en las elecciones.'],
+  clave:3, why:'Monarquía o república: ese era el debate.',
+  an: T(['Posición','Quiénes y qué argumentaban'],[
+    ['Monárquicos','Hipólito Unanue, Juan García del Río y el propio San Martín: una monarquía constitucional daría <b>estabilidad</b> y evitaría la anarquía de los caudillos.'],
+    ['Republicanos','José Faustino Sánchez Carrión, el "Solitario de Sayán": una monarquía sería una <b class="hl">contradicción</b> con la independencia misma.'],
+    ['Resultado','El debate no se cerró en la Sociedad Patriótica, sino en el <b>Congreso de 1822</b>, que optó por la república.']
+  ],'wide')+
+  N('Idea de fondo: la independencia se ganó militarmente antes de resolverse políticamente. Esa indefinición sobre la forma de gobierno anticipa la inestabilidad del <b>Primer Militarismo</b>.')
+});
+
+SLIDES.push({type:'t', bloque:'Independencia', titulo:'El Congreso y la crisis política (1822-1824)', html:
+  '<div class="two"><div>'+
+  S('Primer Congreso Constituyente (1822)')+
+  T(['Dato','Contenido'],[
+    ['Instalación','20 de septiembre de 1822, presidido por <b class="hl">Francisco Javier de Luna Pizarro</b>, clérigo arequipeño que representaba a los criollos de provincias.'],
+    ['Obra mayor','<b>Constitución de 1823</b>, de carácter liberal: soberanía popular y Congreso fuerte frente al Ejecutivo.'],
+    ['Medida social','Abolición de los <b>títulos de nobleza</b>, herencia de la sociedad estamental virreinal.'],
+    ['Poder Ejecutivo','Junta Gubernativa presidida por José de la Mar.']
+  ],'wide')+
+  '</div><div>'+
+  S('Las campañas a Puertos Intermedios y el caos')+
+  T(['Momento','Hecho'],[
+    ['Primera campaña (1823)','Rudecindo Alvarado es derrotado en <b>Torata y Moquegua</b>.'],
+    ['Motín de Balconcillo','Febrero de 1823: el ejército impone a <b>José de la Riva Agüero</b> como primer presidente del Perú.'],
+    ['Segunda campaña (1823)','Santa Cruz fracasa pese a la victoria parcial de Zepita.'],
+    ['Dos presidentes','El Congreso destituye a Riva Agüero, que se instala en Trujillo, y nombra a <b class="hl">Torre Tagle en Lima</b>: el país tiene dos gobiernos a la vez.'],
+    ['Salida','Se llama a Bolívar (1823), que recibe poderes dictatoriales.']
+  ])+
+  S('La dictadura de Bolívar (1824-1826)')+
+  T(null,[
+    ['Ejército','Mayoritariamente <b>colombiano y venezolano</b>, con indígenas y mestizos peruanos en las montoneras.'],
+    ['Finanzas','Confiscación de bienes de criollos y de la Iglesia y <b class="hl">restablecimiento del tributo indígena</b> (1826), que San Martín había abolido.'],
+    ['Victorias','Junín (agosto de 1824) y Ayacucho (diciembre de 1824), seguidas de la Capitulación firmada por Sucre y Canterac.'],
+    ['Proyecto','Constitución vitalicia de 1826 y Federación de los Andes; el rechazo criollo lo obliga a salir en 1826.']
+  ],'wide')+
+  '</div></div>'
+});
+
+SLIDES.push({type:'q', n:7, bloque:'Independencia', titulo:'La dictadura de Bolívar',
+  enun:'Respecto a la dictadura de Bolívar, indique la secuencia correcta de verdad (V) o falsedad (F).',
+  alts:['FFVF','VFVF','FVVV','VFFV','VFVV'],
+  clave:0, why:'Solo es cierto lo de Junín y Ayacucho.',
+  an: T(['Proposición','Análisis'],[
+    ['I. Apoyo total de los indígenas gracias a la supresión del tributo',F+' <b class="hl">Bolívar restableció el tributo</b> en 1826 para financiar la guerra; también confiscó bienes. No hubo tal apoyo total.'],
+    ['II. El grueso del ejército era casi exclusivamente de criollos peruanos',F+' El núcleo era <b>colombiano y venezolano</b>; los peruanos aportaron sobre todo montoneras indígenas y mestizas.'],
+    ['III. Durante su estadía se desarrollaron Junín y Ayacucho',V+' Agosto y diciembre de 1824.'],
+    ['IV. Tras Ayacucho se desató una cruel venganza contra los realistas',F+' La <b>Capitulación de Ayacucho</b>, firmada por Sucre y Canterac, garantizó la vida, los bienes y el regreso a España de los vencidos.']
+  ],'wide')+
+  N('La palabra "total" en la proposición I y "exclusivamente" en la II son alertas: los absolutos casi nunca sobreviven al contraste con los hechos.')
+});
+
+SLIDES.push({type:'q', n:8, bloque:'Independencia', titulo:'Las montoneras',
+  enun:'En el caso del Perú, los montoneros, aquellos que apoyaron en las batallas de Junín y Ayacucho, estaban integrados por',
+  alts:['soldados negros.','guerrilleros indígenas.','soldados realistas.','batallones de cimarrones y mulatos.','criollos y mestizos pobres.'],
+  clave:1, why:'Campesinado indígena de la sierra central.',
+  an: T(['Aspecto','Contenido'],[
+    ['Quiénes eran','<b class="hl">Campesinos indígenas</b> de la sierra central y del sur, organizados en partidas irregulares.'],
+    ['Qué hacían','Hostigamiento, emboscadas, corte de comunicaciones, abastecimiento y espionaje para el ejército patriota.'],
+    ['Zonas','Valles del Mantaro, Jauja, Tarma, Huánuco y las alturas del sur.'],
+    ['Después','Fueron desmovilizados y excluidos del nuevo Estado: la independencia no cambió su condición social.']
+  ],'wide')+
+  N('Comparación continental que pide el enunciado: <b>llaneros</b> en Venezuela, <b>rotos</b> en Chile, <b>montoneros</b> en el Perú. En los tres casos, sectores populares sostienen una guerra cuyos frutos políticos captan las élites criollas.')
+});
+
+SLIDES.push({type:'q', n:9, bloque:'Independencia', titulo:'La doctrina Monroe',
+  enun:'¿Qué proponía la doctrina Monroe, formulada en 1823 y atribuida al presidente de EE. UU. James Monroe?',
+  alts:['Facilitar la intervención yanqui en el Perú.','Defender los monopolios económicos norteamericanos en Hispanoamérica.','Proteger las libertades políticas y religiosas en América Latina.','Rechazar cualquier intervención europea en América.','El retiro de las potencias europeas de las colonias en Las Antillas.'],
+  clave:3, why:'"América para los americanos".',
+  an: T(['Aspecto','Contenido'],[
+    ['Formulación','1823: Estados Unidos declara que el continente americano <b class="hl">no está abierto a nueva colonización europea</b> y que toda intervención será vista como acto hostil.'],
+    ['Contexto','La Santa Alianza amenazaba con ayudar a España a recuperar sus colonias recién independizadas.'],
+    ['Lema','"América para los americanos".'],
+    ['Lectura crítica','En los hechos fue la base doctrinal de la <b>hegemonía estadounidense</b>: excluye a Europa para reservarse el área de influencia.']
+  ],'wide')+
+  N('Cuidado con A y B: describen las <b>consecuencias históricas</b> de la doctrina, no lo que la doctrina proponía en su formulación. La pregunta pide el enunciado original.')
+});
+
+SLIDES.push({type:'t', bloque:'Primer Militarismo', titulo:'Caudillos y constituciones (1827-1841)', html:
+  '<div class="two"><div>'+
+  S('Gobiernos y conflictos')+
+  T(['Etapa','Hechos clave'],[
+    ['José de la Mar (1827-1829)','Constitución de 1828. Guerra con la Gran Colombia: derrota en Portete de Tarqui (1829) y <b class="hl">Tratado Larrea-Gual</b>.'],
+    ['Gamarra, primer gobierno (1829-1833)','Gobierno autoritario; intentos de anexar Bolivia.'],
+    ['Orbegoso y Salaverry (1833-1836)','Guerra civil que abre la puerta a la intervención de Santa Cruz.'],
+    ['Gamarra, segundo gobierno (1840-1841)','Constitución de 1839 y muerte en <b>Ingavi</b>.']
+  ],'wide')+
+  '</div><div>'+
+  S('Las constituciones del periodo')+
+  T(['Año','Carácter y rasgos'],[
+    ['1823','Liberal: Congreso fuerte, Ejecutivo débil.'],
+    ['1826','<b>Vitalicia</b>, impuesta por Bolívar: presidente de por vida.'],
+    ['1828','Anula la vitalicia. Congreso <b>bicameral</b>, <b class="hl">voto censitario</b> (según renta o propiedad) y juntas departamentales. Villarán la llamó "la madre de nuestras constituciones".'],
+    ['1834','Liberal, bajo Orbegoso.'],
+    ['1839','De Huancayo, <b>conservadora</b>: mandato de seis años y Ejecutivo fuerte, bajo Gamarra.']
+  ])+
+  '</div></div>'
+});
+
+SLIDES.push({type:'q', n:10, bloque:'Primer Militarismo', titulo:'Rasgo político del Primer Militarismo',
+  enun:'Tras la independencia del Perú, la ausencia de una clase política consolidada y la debilidad institucional permitieron que los caudillos militares asumieran el poder. ¿Cuál fue una característica política de los primeros años del Primer Militarismo?',
+  alts:['Predominio de gobiernos civiles estables.','Inestabilidad política y predominio de caudillos.','Consolidación del régimen monárquico.','Eliminación de los conflictos entre militares.','Fortalecimiento inmediato de los partidos políticos.'],
+  clave:1, why:'Caudillismo, golpes y constituciones efímeras.',
+  an: T(['Indicador','Evidencia'],[
+    ['Gobiernos breves','Entre 1827 y 1845 se suceden más de una decena de gobiernos, muchos de meses.'],
+    ['Constituciones','Cinco cartas en menos de veinte años (1823, 1826, 1828, 1834 y 1839): ninguna logra estabilizar el sistema.'],
+    ['Guerras internas','Enfrentamientos entre La Mar, Gamarra, Orbegoso y Salaverry, y guerras externas con la Gran Colombia y Bolivia.'],
+    ['Causa de fondo','<b class="hl">No existe clase dirigente civil organizada</b>: el prestigio militar de la guerra de independencia es el único capital político disponible.']
+  ],'wide')+
+  N('Descartes inmediatos: no hubo gobiernos civiles (A), la monarquía nunca se instauró (C), los conflictos militares fueron constantes (D) y los primeros partidos recién aparecen en <b>1871</b> con el Partido Civil (E).')
+});
+
+SLIDES.push({type:'q', n:11, bloque:'Primer Militarismo', titulo:'Debilidad institucional y golpes de Estado',
+  enun:'Durante los primeros años de la República, el Estado peruano enfrentó dificultades para organizar sus instituciones y establecer una autoridad política estable. Esta situación favoreció principalmente',
+  alts:['el fortalecimiento del poder legislativo.','la aparición de gobiernos militares y golpes de Estado.','la instauración de una monarquía constitucional.','la desaparición de los conflictos regionales.','el predominio político de la burguesía industrial.'],
+  clave:1, why:'El vacío institucional lo llena el caudillo armado.',
+  an: T(['Factor','Efecto'],[
+    ['Sin clase política','La élite criolla estaba dividida y sin experiencia de gobierno; el Congreso no lograba imponerse.'],
+    ['Con ejército numeroso','Miles de oficiales sin guerra que librar, con prestigio y tropa: el <b class="hl">recurso del golpe</b> queda a la mano.'],
+    ['Economía arruinada','Sin minería ni comercio en marcha, el Estado no puede pagar ni administrar: la autoridad se vuelve personal.'],
+    ['Resultado','Caudillismo: el poder depende de la lealtad al jefe militar, no de la ley.']
+  ],'wide')+
+  S('Descartes')+
+  T(null,[
+    ['A','El Legislativo fue justamente el poder más débil frente a los caudillos.'],
+    ['D','Los conflictos regionales se <b>agravaron</b>: norte contra sur, Lima contra Arequipa.'],
+    ['E','No existía burguesía industrial en el Perú de 1830.']
+  ],'wide')
+});
+
+SLIDES.push({type:'t', bloque:'Confederación', titulo:'La Confederación Perú-Boliviana (1836-1839)', html:
+  '<div class="two"><div>'+
+  S('El Pacto de Tacna (1837)')+
+  T(['Elemento','Contenido'],[
+    ['Territorio','Tres estados: <b>Nor-Peruano</b>, <b>Sur-Peruano</b> y <b>Boliviano</b>.'],
+    ['Jefe de Estado','Andrés de Santa Cruz, con el título de <b class="hl">Supremo Protector</b>, no de presidente.'],
+    ['Legislativo','Congreso <b>bicameral</b>: Cámara de Senadores y Cámara de Representantes, con igual número por estado.'],
+    ['Proyecto','Criollos liberales que buscaban ventajas comerciales en el Pacífico Sur; puertos libres como Arica y Cobija.']
+  ],'wide')+
+  '</div><div>'+
+  S('Por qué fracasa')+
+  T(['Actor','Motivo'],[
+    ['Chile','Diego Portales ve amenazado el crecimiento de Valparaíso frente a los puertos confederados.'],
+    ['Argentina','Rosas también declara la guerra.'],
+    ['Perú','Gamarra y Castilla se unen a las tropas chilenas: la oposición interna fue decisiva.']
+  ])+
+  S('Las expediciones restauradoras')+
+  T(null,[
+    ['Primera (1837)','Blanco Encalada es cercado y firma el <b>Tratado de Paucarpata</b>, que Chile desconoce.'],
+    ['Segunda (1838-1839)','Manuel Bulnes, con Gamarra y Castilla, vence en la <b class="hl">batalla de Yungay</b> (enero de 1839).'],
+    ['Resultado','Disolución de la Confederación y exilio de Santa Cruz.']
+  ],'wide')+
+  '</div></div>'
+});
+
+SLIDES.push({type:'q', n:12, bloque:'Confederación', titulo:'Por qué fracasó la Confederación',
+  enun:'El hecho que explica mejor la oposición a la Confederación Perú-Boliviana fue',
+  alts:['la expansión territorial de Ecuador sobre el Perú.','la alianza entre Chile y los opositores peruanos a Santa Cruz.','el rechazo de Bolivia a participar en la Confederación.','la intervención militar de España en Sudamérica.','la guerra entre Perú y la Gran Colombia.'],
+  clave:1, why:'Chile y los caudillos peruanos, juntos contra Santa Cruz.',
+  an: T(['Actor','Motivo de la oposición'],[
+    ['Chile','Diego Portales teme que los puertos confederados (Arica, Cobija, Callao) desplacen a <b>Valparaíso</b> como centro comercial del Pacífico.'],
+    ['Caudillos peruanos','Gamarra, Castilla y La Fuente ven la Confederación como una <b class="hl">tutela boliviana</b> y como la división del Perú en dos estados.'],
+    ['La suma','Ambos forman el <b>Ejército Restaurador</b>: sin peruanos a bordo, la expedición chilena no habría triunfado.']
+  ],'wide')+
+  S('Descartes')+
+  T(null,[
+    ['A','Ecuador no intervino en este conflicto.'],
+    ['C','Bolivia fue el <b>motor</b> del proyecto: Santa Cruz era su presidente.'],
+    ['D','España no intervino en la década de 1830; el conflicto con España es de 1864-1866.'],
+    ['E','La guerra con la Gran Colombia fue en 1828-1829, antes de la Confederación.']
+  ],'wide')
+});
+
+SLIDES.push({type:'q', n:13, bloque:'Confederación', titulo:'La consecuencia de Yungay',
+  enun:'La derrota de las fuerzas confederadas ocurrió en la batalla de Yungay en 1839. La consecuencia política de esta derrota fue',
+  alts:['la consolidación definitiva del proyecto confederado.','la incorporación de Bolivia al Estado peruano.','la disolución de la Confederación y la caída de Santa Cruz.','la anexión de Chile al territorio peruano.','el establecimiento de una monarquía constitucional.'],
+  clave:2, why:'Yungay liquida el proyecto y a su jefe.',
+  an: T(['Dato','Contenido'],[
+    ['La batalla','20 de enero de 1839. Manuel Bulnes, con Gamarra y Castilla, derrota al ejército confederado.'],
+    ['Consecuencia inmediata','<b class="hl">Disolución de la Confederación</b> y exilio de Santa Cruz, primero a Ecuador y luego a Europa.'],
+    ['En el Perú','Gamarra asume el poder y convoca el congreso que dicta la <b>Constitución de Huancayo (1839)</b>, conservadora.'],
+    ['En la región','Chile consolida su hegemonía comercial en el Pacífico Sur: antecedente directo del conflicto de 1879.']
+  ],'wide')+
+  N('Ojo con B: dos años después Gamarra intentó justamente anexar Bolivia y terminó muerto en <b>Ingavi</b> (1841). La anexión nunca ocurrió.')
+});
+
+SLIDES.push({type:'t', bloque:'Guano y salitre', titulo:'Del guano al salitre: el Estado y los capitales privados', html:
+  '<div class="two"><div>'+
+  S('La era del guano')+
+  T(['Etapa','Contenido'],[
+    ['Consignaciones','El Estado entrega la venta a consignatarios que adelantan dinero y se quedan con comisiones.'],
+    ['Ley de Consolidación','Pago de la deuda interna con bonos; degenera en el escándalo de la consolidación bajo Echenique.'],
+    ['Ferrocarriles','Henry Meiggs construye una red carísima financiada con deuda: el guano se gasta antes de producirse.'],
+    ['Contrato Dreyfus (1869)','La casa francesa obtiene el <b>monopolio de la venta del guano</b> en Europa a cambio de pagar la deuda externa.']
+  ],'wide')+
+  '</div><div>'+
+  S('Manuel Pardo y el salitre')+
+  T(['Medida','Resultado'],[
+    ['Contexto','Primer presidente civil (1872-1876). El guano se agota y el fisco está quebrado.'],
+    ['Estanco del salitre (1873)','El Estado intenta controlar la comercialización del salitre de Tarapacá para fijar precios.'],
+    ['Fracaso','<b class="hl">Los empresarios y capitalistas privados se resistieron</b>: no aceptaron las cuotas ni vender al Estado, y siguieron produciendo por su cuenta.'],
+    ['Expropiación (1875)','El Estado nacionaliza las salitreras pagando con bonos: aumenta la deuda sin resolver la crisis.']
+  ])+
+  N('En 1876 el Perú se declara en <b>bancarrota</b>. Tres años después empieza la guerra.')+
+  '</div></div>'
+});
+
+SLIDES.push({type:'q', n:14, bloque:'Prosperidad Falaz', titulo:'Las consignaciones',
+  enun:'En una primera etapa, el Estado recurrió a empresarios particulares que vendían el guano en los mercados internacionales, entregaban al Estado una parte de las ganancias y recibían una comisión. La modalidad descrita corresponde',
+  alts:['al Contrato Dreyfus.','al arrendamiento.','a las consignaciones.','al monopolio estatal.','al libre comercio.'],
+  clave:2, why:'El Estado conserva la propiedad; el consignatario vende.',
+  an: T(['Modalidad','Cómo funciona'],[
+    ['Arrendamiento (1840-1847)','El Estado alquila la explotación a un particular a cambio de una suma fija. Primer contrato: Francisco Quirós.'],
+    ['Consignación','El consignatario vende el guano <b class="hl">a nombre del Estado</b>, cobra una comisión y adelanta dinero al fisco. La propiedad del recurso sigue siendo estatal.'],
+    ['Contrato Dreyfus (1869)','La casa francesa compra dos millones de toneladas y obtiene el <b>monopolio de la venta</b> en Europa: elimina a los consignatarios.']
+  ],'wide')+
+  S('Consecuencias de la consignación')+
+  T(null,[
+    ['Positiva para unos pocos','Nace la <b>burguesía consignataria</b>, que luego funda el Partido Civil.'],
+    ['Negativa para el país','Adelantos con altos intereses: el Estado gasta el guano antes de venderlo y se endeuda. De ahí el nombre de <b>Prosperidad Falaz</b>.']
+  ],'wide')
+});
+
+SLIDES.push({type:'q', n:15, bloque:'Prosperidad Falaz', titulo:'El levantamiento de los hermanos Gutiérrez',
+  enun:'Tras la muerte de José Balta en 1872, los hermanos Gutiérrez encabezaron un levantamiento militar para impedir el acceso de Manuel Pardo a la presidencia. La rebelión fracasó y enfrentó una fuerte oposición popular limeña. Este acontecimiento evidencia principalmente',
+  alts:['el fortalecimiento definitivo del civilismo frente al militarismo.','la eliminación de la influencia militar en la política peruana.','la consolidación del predominio económico de los consignatarios.','el triunfo de la aristocracia colonial sobre los sectores populares.','la instauración de una dictadura militar encabezada por Manuel Pardo.'],
+  clave:0, why:'El civilismo llega al poder con respaldo popular.',
+  an: T(['Hecho','Lectura'],[
+    ['Julio de 1872','Los hermanos Gutiérrez dan el golpe y asesinan al presidente Balta para impedir el traspaso del mando.'],
+    ['Reacción','La población limeña se vuelca en defensa del orden constitucional; los golpistas son derrotados y linchados.'],
+    ['Significado','<b class="hl">El militarismo pierde legitimidad</b> incluso ante los sectores populares, y Manuel Pardo asume como primer presidente civil.']
+  ],'wide')+
+  S('Por qué las otras no')+
+  T(null,[
+    ['B','La influencia militar no desapareció: vuelve con fuerza en el <b>Segundo Militarismo</b> (1884).'],
+    ['C','Los consignatarios ya habían sido desplazados por el <b>Contrato Dreyfus</b> en 1869.'],
+    ['E','Pardo era <b>civil</b>: fue elegido, no impuso dictadura alguna.']
+  ],'wide')
+});
+
+SLIDES.push({type:'q', n:16, bloque:'Prosperidad Falaz', titulo:'El debate sobre el sufragio',
+  enun:'Respecto al problema del voto en el debate entre conservadores y liberales durante la Prosperidad Falaz, determine la alternativa correcta.',
+  alts:['Los liberales buscaron ampliar la participación ciudadana frente a posiciones conservadoras más restrictivas.','Los conservadores propusieron establecer el sufragio universal masculino.','Los liberales defendieron la exclusión política de los sectores populares.','Ambos grupos coincidieron en eliminar el derecho al sufragio.','Los conservadores plantearon el voto popular.'],
+  clave:0, why:'Liberales: ampliar. Conservadores: restringir.',
+  an: T(['Corriente','Postura sobre la ciudadanía'],[
+    ['Liberales','Ampliar la participación: la soberanía reside en el <b>pueblo</b>, aunque sea analfabeto. Figura clave: Benito Laso.'],
+    ['Conservadores','Restringir el voto a quienes tienen instrucción y propiedad. Bartolomé Herrera lo formula como la <b class="hl">soberanía de la inteligencia</b>: gobernar corresponde a quien sabe.'],
+    ['Quién ganó','A la larga, los conservadores: la ley electoral de <b>1896</b> eliminó el voto de los analfabetos y excluyó a la mayoría indígena hasta 1979.']
+  ],'wide')+
+  N('Las alternativas B, C, D y E invierten las posiciones o inventan acuerdos que nunca existieron. Si tienes claro el par <b>liberal = ampliar / conservador = restringir</b>, la pregunta se resuelve en diez segundos.')
+});
+
+SLIDES.push({type:'q', n:17, bloque:'Prosperidad Falaz', titulo:'El gobierno de Manuel Pardo',
+  enun:'Durante el gobierno de Manuel Pardo y Lavalle, el Primer Civilismo impulsó medidas para enfrentar la crisis económica y limitar el predominio militar. ¿Cuál de las siguientes medidas corresponde a su gobierno?',
+  alts:['Nacionalizó los ferrocarriles.','El gasto militar aumentó más y privatizó el salitre.','Eliminó el impuesto salitrero.','Firmó el Contrato Grace con Dreyfus.','Redujo el gasto militar y expropió el salitre.'],
+  clave:4, why:'Recortar al ejército y estatizar el salitre.',
+  an: T(['Medida','Contenido'],[
+    ['Reducción del gasto militar','Recorte de efectivos y creación de la <b>Guardia Nacional</b>: el civilismo quería un ejército pequeño y subordinado.'],
+    ['Estanco del salitre (1873)','Intento de controlar la comercialización; fracasa por la resistencia de los <b>empresarios privados</b>.'],
+    ['Expropiación (1875)','El Estado <b class="hl">nacionaliza las salitreras</b> pagando con bonos: aumenta la deuda y golpea intereses chilenos y británicos.'],
+    ['Otras obras','"República Práctica": Escuela de Ingenieros, Escuela de Agricultura, censo de 1876 y descentralización fiscal.']
+  ],'wide')+
+  N('Descarte decisivo: el <b>Contrato Grace</b> es de 1889, con acreedores <b>ingleses</b> y bajo el gobierno de Cáceres. Mezclar Grace con Dreyfus es el error más común de este tema.')
+});
+
+SLIDES.push({type:'t', bloque:'Guerra del Pacífico', titulo:'La guerra del Salitre (1879-1883)', html:
+  '<div class="two"><div>'+
+  S('Causas')+
+  T(['Tipo','Contenido'],[
+    ['Económica','Competencia por el <b class="hl">salitre</b>: Tarapacá peruano frente a Antofagasta, explotada por capitales chilenos y británicos.'],
+    ['Financiera','Inversionistas británicos y casas comerciales extranjeras interesadas en controlar el recurso.'],
+    ['Detonante','Impuesto de los <b>10 centavos</b> que Bolivia (Daza) cobra a la Compañía de Salitres de Antofagasta, en 1878.'],
+    ['Diplomática','Tratado secreto de alianza Perú-Bolivia (1873), que Chile usa como justificación.']
+  ],'wide')+
+  '</div><div>'+
+  S('Campañas y cierre')+
+  T(['Campaña','Hechos'],[
+    ['Marítima','Combates de Iquique y <b>Angamos</b> (1879): muere Grau y el Perú pierde el dominio del mar.'],
+    ['Sur','San Francisco, Tarapacá, Alto de la Alianza y Arica (1880).'],
+    ['Lima','San Juan y Miraflores (enero de 1881): ocupación de la capital.'],
+    ['Breña','Resistencia de Cáceres en la sierra central (1881-1883): San Pablo y Huamachuco.'],
+    ['Tratado de Ancón','20 de octubre de 1883, firmado por el gobierno de <b>Miguel Iglesias</b>.']
+  ])+
+  '</div></div>'
+});
+
+SLIDES.push({type:'q', n:18, bloque:'Guerra del Pacífico', titulo:'Causas y cierre de la guerra',
+  enun:'Respecto a la guerra del Salitre (1879-1883), identifique la secuencia correcta de verdad (V) o falsedad (F).',
+  alts:['VFV','FFV','FVF','VVF','VVV'],
+  clave:3, why:'La III falla: Tacna y Arica no se cedieron.',
+  an: T(['Proposición','Análisis'],[
+    ['I. Una causa fue la disputa por los territorios ricos en salitre del desierto de Atacama',V+' Antofagasta y Tarapacá concentraban el negocio salitrero mundial.'],
+    ['II. La alianza defensiva Perú-Bolivia influyó en la incorporación del Perú al conflicto',V+' El <b class="hl">tratado secreto de 1873</b> obligaba al Perú a defender a Bolivia; Chile lo usó como justificación para declararle la guerra.'],
+    ['III. El Tratado de Ancón cedió definitivamente Tacna y Arica a Chile',F+' Lo cedido a perpetuidad fue <b>Tarapacá</b>. Tacna y Arica quedaron bajo ocupación por diez años, con un plebiscito que nunca se realizó.']
+  ],'wide')+
+  N('Precisión de nombre: el folleto llama "Baptista-Walker" a esa alianza, pero ese nombre corresponde a los tratados <b>Bolivia-Chile de 1895</b>. El pacto Perú-Bolivia de 1873 lo firmaron Riva-Agüero y De la Cruz Benavente. El contenido de la proposición, en todo caso, es correcto.')
+});
+
+SLIDES.push({type:'t', bloque:'Cáceres y el capital extranjero', titulo:'El Contrato Grace (1889)', html:
+  '<div class="two"><div>'+
+  S('Lo que entrega el Perú')+
+  T(['Concesión','Detalle'],[
+    ['Ferrocarriles','Administración de los ferrocarriles del Estado por <b class="hl">66 años</b>.'],
+    ['Territorio','Dos millones de hectáreas en la <b>Selva Alta</b> (Perené, Chanchamayo).'],
+    ['Navegación','Libre navegación en el <b>lago Titicaca</b>.'],
+    ['Guano','Tres millones de toneladas de guano.'],
+    ['Dinero','33 cuotas anuales de 80 000 libras esterlinas.']
+  ])+
+  '</div><div>'+
+  S('Lo que obtiene el Perú')+
+  T(null,[
+    ['Deuda','Los tenedores de bonos ingleses <b>cancelan la deuda externa</b> (unos 51 millones de libras).'],
+    ['Ferrocarriles','Compromiso de ampliar tramos: Chicla-La Oroya y Marangani-Sicuani.'],
+    ['Crédito','El Perú vuelve al mercado financiero internacional.']
+  ],'wide')+
+  S('Consecuencias')+
+  T(null,[
+    ['Económica','Nace la <b>Peruvian Corporation</b> (Londres, 1890): inicio del control británico sobre la economía peruana.'],
+    ['Política','Fuerte oposición de Piérola y de los civilistas, que lo acusan de entreguismo. Es una de las banderas de la Coalición Nacional.']
+  ],'wide')+
+  '</div></div>'
+});
+
+SLIDES.push({type:'q', n:19, bloque:'Reconstrucción', titulo:'El Contrato Grace',
+  enun:'Respecto a las causas y consecuencias del Contrato Grace (1889), identifique las premisas correctas.',
+  alts:['solo I','I y II','I y III','solo II','II y III'],
+  clave:3, why:'Los acreedores eran ingleses, no franceses.',
+  an: T(['Proposición','Análisis'],[
+    ['I. Suscrito durante el gobierno de Cáceres con los acreedores <b>franceses</b>',F+' El gobierno es correcto, pero los tenedores de bonos eran <b class="hl">ingleses</b>. Los franceses son los de Dreyfus (1869): ahí está la trampa.'],
+    ['II. El Perú cedió la administración de los ferrocarriles por 66 años',V+' Junto con dos millones de hectáreas en la Selva Alta, la libre navegación en el Titicaca, tres millones de toneladas de guano y 33 cuotas anuales.'],
+    ['III. Permitió recuperar de inmediato el control y consolidar su soberanía económica',F+' Exactamente al revés: el Perú <b>recuperó el crédito</b> pero entregó su infraestructura. Nace la Peruvian Corporation y con ella el control británico.']
+  ],'wide')+
+  N('Media verdad es igual a falso. La proposición I acierta en el gobierno y falla en el acreedor: basta ese detalle para descartarla.')
+});
+
+SLIDES.push({type:'t', bloque:'República Aristocrática', titulo:'República Aristocrática (1895-1919)', html:
+  '<div class="three"><div>'+
+  S('Quién manda')+
+  T(null,[
+    ['Oligarquía','Un grupo reducido de familias ligadas a la <b>agroexportación</b> (azúcar y algodón), la banca y el comercio.'],
+    ['Partido Civil','Controla el Estado desde 1895; Basadre habla del "Estado oligárquico".'],
+    ['Gamonalismo','En la sierra, los hacendados ejercen el poder real sobre las comunidades.']
+  ],'wide')+
+  '</div><div>'+
+  S('Dependencia externa')+
+  T(null,[
+    ['Gran Bretaña','Peruvian Corporation: ferrocarriles y navegación.'],
+    ['Estados Unidos','Cerro de Pasco Corporation (minería) e International Petroleum Company (petróleo de La Brea y Pariñas).'],
+    ['Efecto','Los sectores más rentables quedan en manos de <b class="hl">enclaves extranjeros</b>.']
+  ],'wide')+
+  '</div><div>'+
+  S('Formas de trabajo')+
+  T(['Sistema','Dónde y cómo'],[
+    ['Enganche','Haciendas de caña y minas: <b>pago adelantado</b> que endeuda al trabajador y lo ata al patrón.'],
+    ['Correrías','Selva cauchera: captura violenta de indígenas para el trabajo forzado.'],
+    ['Yanaconaje','Haciendas costeñas: el campesino trabaja una parcela a cambio de parte de la cosecha.']
+  ])+
+  '</div></div>'+
+  N('Movimiento obrero: ideología <b>anarcosindicalista</b>, con Manuel González Prada como principal referente; sindicatos como la Unión Textil de Vitarte; huelgas y paros que consiguen la <b>jornada de ocho horas en 1919</b>.')
+});
+
+SLIDES.push({type:'q', n:20, bloque:'República Aristocrática', titulo:'Educación, constitución y economía',
+  enun:'La República Aristocrática estuvo signada por el dominio de una oligarquía agroexportadora, financiera y minera vinculada al capital extranjero. Determine la secuencia correcta de verdad (V) o falsedad (F).',
+  alts:['VVV','FVV','FVF','VFF','VVF'],
+  clave:3, why:'Sí hubo expansión educativa; no hubo enclaves industriales.',
+  an: T(['Proposición','Análisis'],[
+    ['I. La educación primaria se amplió con reformas de gobiernos como el de José Pardo y Barreda',V+' La ley de instrucción primaria (1905) la declaró <b>gratuita y obligatoria</b>, y puso las escuelas a cargo del Estado. Fue la reforma social más visible del periodo.'],
+    ['II. Se reformó continuamente la Constitución de 1860 para perpetuar a los presidentes',F+' La Constitución de 1860 fue la más <b>estable</b> de nuestra historia. El intento de perpetuación llega con Leguía, ya en <b class="hl">1919-1920</b>, es decir, al final del periodo.'],
+    ['III. Sector exportador dinámico con enclaves agrarios e <b>industriales</b>',F+' Hubo enclaves <b>extractivos</b> (Cerro de Pasco, IPC) y agroexportadores, pero no industriales: la industria fue incipiente y subordinada a la importación.']
+  ],'wide')+
+  N('Concepto que hay que manejar: <b>enclave</b> es una zona explotada por una empresa extranjera, con escasa presencia del Estado y sin encadenamientos con el resto de la economía nacional.')
+});
+
+SLIDES.push({type:'q', n:21, bloque:'República Aristocrática', titulo:'Rasgos del periodo',
+  enun:'Determine la secuencia correcta de verdad (V) o falsedad (F) de los enunciados relacionados con la República Aristocrática.',
+  alts:['VVV','FVF','VVF','FVV','FFF'],
+  clave:2, why:'Educación sí; perpetuación presidencial no.',
+  an: T(['Proposición','Análisis'],[
+    ['I. La ampliación de la cobertura educativa fue favorecida por algunos gobiernos del periodo',V+' Sobre todo José Pardo y Barreda, en sus dos gobiernos.'],
+    ['II. El Partido Civil fue la agrupación política más influyente',V+' Controló el Estado entre 1899 y 1919; por eso Basadre habla de <b class="hl">República Aristocrática</b>.'],
+    ['III. Las reformas constitucionales sucesivas buscaron la perpetuidad de los mandatarios',F+' No hubo tal cosa: la alternancia entre familias civilistas funcionó con regularidad.']
+  ],'wide')+
+  N('Esta pregunta y la anterior evalúan lo mismo con distinta redacción. Si detectas que <b>II de la 20</b> y <b>III de la 21</b> dicen lo mismo, ambas caen juntas.')
+});
+
+SLIDES.push({type:'q', n:22, bloque:'República Aristocrática', titulo:'Cómo controló el poder el Partido Civil',
+  enun:'¿Cuáles fueron los mecanismos políticos que permitieron al Partido Civil controlar el Estado peruano en las primeras décadas del siglo XX?',
+  alts:['I y II','II y III','I, II y III','solo I','I y III'],
+  clave:4, why:'Ley electoral excluyente más alianza con los demócratas.',
+  an: T(['Proposición','Análisis'],[
+    ['I. La ley electoral de Piérola privó del voto a los analfabetos',V+' La reforma de <b class="hl">1896</b> eliminó el voto de los analfabetos y creó la Junta Electoral Nacional: deja fuera a la mayoría indígena del país.'],
+    ['II. Aumento del poder adquisitivo con las exportaciones durante la Gran Guerra',F+' No es un <b>mecanismo político</b>, y además es falso: la guerra trajo inflación y caída del salario real, origen de las huelgas de 1918-1919.'],
+    ['III. Respaldo de organizaciones como el Partido Demócrata, aliado inicial del Civilismo',V+' La alianza civilista-demócrata sostuvo el gobierno de Piérola (1895-1899) y abrió el periodo.']
+  ],'wide')+
+  N('Lee bien el encabezado: pide <b>mecanismos políticos</b>. La proposición II es económica y por eso no responde a la pregunta, aunque fuera cierta.')
+});
+
+SLIDES.push({type:'q', n:23, bloque:'República Aristocrática', titulo:'Economía y movimiento obrero',
+  enun:'Entre 1895 y 1919, el Partido Civil lideró un periodo caracterizado por la hegemonía de la oligarquía agroexportadora. Determine la secuencia correcta de verdad (V) o falsedad (F).',
+  alts:['VVF','VFV','FVV','VVV','FVF'],
+  clave:1, why:'Hubo dependencia y huelgas, pero no participación política.',
+  an: T(['Proposición','Análisis'],[
+    ['I. La economía dependía de la exportación de materias primas (azúcar, algodón y minerales)',V+' Modelo primario-exportador: se exportan materias primas y se importan manufacturas.'],
+    ['II. Las mayorías indígenas y obreras disfrutaron de amplia participación política',F+' <b class="hl">Exactamente lo contrario</b>: voto censitario y alfabeto, sin derechos para indígenas, analfabetos ni mujeres.'],
+    ['III. El movimiento obrero lideró las primeras huelgas organizadas bajo influencia del anarquismo',V+' Anarcosindicalismo, con González Prada como referente; sindicatos como la Unión Textil de Vitarte y la conquista de las <b>ocho horas en 1919</b>.']
+  ],'wide')+
+  N('Las tres proposiciones dibujan el periodo completo: <b>dependencia económica, exclusión política y protesta social</b>. Ese trípode es la definición operativa de República Aristocrática.')
+});
+
+SLIDES.push({type:'t', bloque:'Oncenio', titulo:'El Oncenio de Leguía (1919-1930)', html:
+  '<div class="two"><div>'+
+  S('La Patria Nueva')+
+  T(['Medida','Contenido'],[
+    ['Discurso','Régimen <b>antioligárquico</b> en el discurso: enfrenta al Partido Civil y se apoya en las clases medias.'],
+    ['Constitución de 1920','Reemplaza a la de 1860: mandato de cinco años y <b class="hl">reconocimiento legal de las comunidades indígenas</b>.'],
+    ['Autoritarismo','Reelecciones sucesivas, deportación de opositores y cierre de la prensa crítica.'],
+    ['Ley de Conscripción Vial (1920)','Trabajo obligatorio de los varones de 18 a 60 años, de 6 a 12 días al año, en carreteras. Se la llamó la <b>mita republicana</b>.']
+  ],'wide')+
+  '</div><div>'+
+  S('Economía y límites')+
+  T(['Tema','Contenido'],[
+    ['Endeudamiento','Préstamos masivos de bancos <b>estadounidenses</b>: la "danza de los millones".'],
+    ['Misión Cumberland','Enviada por EE. UU. para <b class="hl">controlar la política monetaria</b> peruana; en ese marco se crea el Banco de Reserva (1922).'],
+    ['Tratado Salomón-Lozano (1922)','Con Colombia: el Perú entrega el <b>trapecio amazónico</b> (Leticia).'],
+    ['Tratado de Lima (1929)','Con Chile: <b>Tacna vuelve al Perú</b> y Arica queda definitivamente para Chile.'],
+    ['Caída','La crisis de 1929 corta los préstamos y hunde los precios de exportación: Sánchez Cerro lo derroca en 1930.']
+  ])+
+  '</div></div>'
+});
+
+SLIDES.push({type:'q', n:24, bloque:'Oncenio', titulo:'El modelo económico del Oncenio',
+  enun:'En el Oncenio de Augusto B. Leguía se implementó una serie de reformas que favorecieron la inversión extranjera y el crecimiento económico, en un régimen marcado por prácticas autoritarias. Marque el enunciado que caracteriza a este periodo.',
+  alts:['Recibe préstamos y capitales de EE. UU.','Nacionalización de las empresas extranjeras','Aplica medidas proteccionistas con subsidios.','Fomento del aislamiento económico','Establecimiento del control de precios'],
+  clave:0, why:'La "danza de los millones" norteamericana.',
+  an: T(['Dato','Contenido'],[
+    ['Endeudamiento','Préstamos masivos de bancos estadounidenses: la deuda externa se multiplica por diez durante el Oncenio.'],
+    ['Inversión','Cerro de Pasco, International Petroleum Company y capitales norteamericanos en obras públicas.'],
+    ['Nombre','Se conoce como la <b class="hl">"danza de los millones"</b>: dinero fácil que financia carreteras, irrigaciones y edificios públicos.'],
+    ['Giro geopolítico','El Perú pasa de la órbita <b>británica</b> a la <b>estadounidense</b>.'],
+    ['Final','La crisis de 1929 corta el crédito y hunde las exportaciones: el régimen cae en 1930.']
+  ],'wide')+
+  N('Las otras cuatro alternativas describen políticas <b>opuestas</b> a las del Oncenio: nacionalización, proteccionismo, aislamiento y control de precios. Pregunta tomada del examen UNMSM 2025-II.')
+});
+
+SLIDES.push({type:'q', n:25, bloque:'Oncenio', titulo:'Beneficios al capital extranjero',
+  enun:'Entre los beneficios otorgados al capital extranjero durante el Oncenio destacan los siguientes.',
+  alts:['I y II','II y III','I y III','II, III y IV','I, II y III'],
+  clave:1, why:'La IPC y la Peruvian Corporation.',
+  an: T(['Proposición','Análisis'],[
+    ['I. El inicio de la explotación minera de Cerro de Pasco en la sierra central',F+' La Cerro de Pasco Corporation <b class="hl">inicia sus operaciones en 1902</b>, durante la República Aristocrática, no en el Oncenio.'],
+    ['II. Beneficios en La Brea y Pariñas a la IPC',V+' El <b>Laudo de París (1922)</b> resolvió el litigio a favor de la empresa y la exoneró de impuestos por cincuenta años.'],
+    ['III. Entrega de los ferrocarriles a perpetuidad a la Peruvian Corporation',V+' En 1928 Leguía convirtió en <b>perpetua</b> la concesión que el Contrato Grace había fijado en 66 años.'],
+    ['IV. Entrega del trapecio amazónico mediante el tratado Rada Gamio-Figueroa Larraín',F+' El trapecio se entregó por el <b>Salomón-Lozano (1922)</b>. El Rada Gamio-Figueroa Larraín es el tratado de 1929 con <b>Chile</b>, sobre Tacna y Arica.']
+  ],'wide')+
+  N('Dos tratados del Oncenio, dos vecinos distintos: <b>Salomón-Lozano</b> con Colombia (trapecio amazónico) y <b>Rada Gamio-Figueroa Larraín</b> con Chile (Tacna vuelve, Arica queda).')
+});
+
+SLIDES.push({type:'keys'});
+
+/* ============================================================
+   RENDER
+   ============================================================ */
+var LETTERS=['A','B','C','D','E'];
+var stage=document.getElementById('stage');
+
+function renderCover(){
+  return '<div class="slide cover">'+
+    '<div class="top">'+
+      '<div class="kicker">Academia ADUNI &nbsp;|&nbsp; San Marcos Top DE 2026-III &nbsp;|&nbsp; Semana 04</div>'+
+      '<h1><span>Per&uacute;: siglo XIX</span><span>e inicios</span><span>del siglo XX</span></h1>'+
+      '<div class="rulebig"></div>'+
+      '<div class="sub">Resolución completa de la práctica dirigida: 25 preguntas, con la teoría justa para sustentar cada clave.</div>'+
+    '</div>'+
+    '<div class="bot"><span>Historia &middot; Práctica dirigida</span><span>Espacio o flecha derecha para avanzar</span></div>'+
+  '</div>';
+}
+
+function renderKeys(){
+  var pd=[1,4,0,2,2,3,0,1,3,1,1,1,2,2,0,0,4,3,3,3,2,4,1,0,1];
+  var cells='';
+  for(var i=0;i<pd.length;i++){
+    cells+='<div class="keycell"><span class="n">'+(i+1)+'</span><span class="a">'+LETTERS[pd[i]]+'</span></div>';
+  }
+  var tarea='A B C D E C E A D B E D B A C B A E C D'.split(' ');
+  var tcells='';
+  for(var j=0;j<tarea.length;j++){
+    tcells+='<div class="keycell"><span class="n">'+(j+1)+'</span><span class="a" style="color:var(--ink)">'+tarea[j]+'</span></div>';
+  }
+  return '<div class="slide" data-grow="1">'+
+    '<div class="band"><div class="num theory">&#10003;</div><div class="meta"><div class="bloque">Cierre</div>'+
+    '<div class="titulo">Claves y ruta de repaso</div></div><div class="brand">ADUNI<br>Semana 03</div></div>'+
+    '<div class="body"><div class="fitwrap">'+
+      '<h4 class="sec">Práctica dirigida</h4><div class="keysgrid">'+cells+'</div>'+
+      '<h4 class="sec">Tarea domiciliaria (claves del folleto)</h4><div class="keysgrid">'+tcells+'</div>'+
+      N('Las claves impresas en el folleto corresponden a la <b>tarea domiciliaria</b>, no a la práctica dirigida.')+
+      '<h4 class="sec">Tres ideas que deben quedar</h4>'+
+      T(null,[
+        ['Europa medieval','El poder se sostiene en la alianza entre fuerza militar y legitimidad religiosa: papado y francos, señor y vasallo, orden divino y estamentos.'],
+        ['Virreinato','Toda institución colonial existe para lo mismo: extraer tributo y trabajo indígena y trasladar la plata a la metrópoli.'],
+        ['Borbones','Más impuestos y más control peninsular producen el efecto contrario al buscado: rebeliones indígenas y resentimiento criollo.']
+      ],'wide')+
+    '</div></div></div>';
+}
+
+function renderTheory(s){
+  return '<div class="slide" data-grow="1">'+
+    '<div class="band"><div class="num theory">&#9632;</div><div class="meta"><div class="bloque">'+s.bloque+'</div>'+
+    '<div class="titulo">'+s.titulo+'</div></div><div class="brand">Teoría de apoyo</div></div>'+
+    '<div class="body"><div class="fitwrap">'+s.html+'</div></div></div>';
+}
+
+function renderQ(s){
+  var alts='';
+  for(var i=0;i<s.alts.length;i++){
+    alts+='<li class="alt'+(i===s.clave?' hit':'')+'"><span class="bub">'+LETTERS[i]+'</span><span class="txt">'+s.alts[i]+'</span></li>';
+  }
+  return '<div class="slide">'+
+    '<div class="band"><div class="num">'+s.n+'</div><div class="meta"><div class="bloque">'+s.bloque+'</div>'+
+    '<div class="titulo">'+s.titulo+'</div></div><div class="brand">Práctica dirigida<br>Pregunta '+s.n+' de 25</div></div>'+
+    '<div class="body"><div class="fitwrap"><div class="qgrid">'+
+      '<div class="qleft"><p class="enun">'+s.enun+'</p><ul class="alts">'+alts+'</ul></div>'+
+      '<div class="qright"><div class="reveal">'+
+        '<div class="clavebox"><span class="let">'+LETTERS[s.clave]+'</span><span class="why">'+s.why+'</span></div>'+
+        s.an+
+      '</div></div>'+
+    '</div></div></div>'+
+    '<div class="hintrev">Espacio para ver la clave</div>'+
+  '</div>';
+}
+
+var html='';
+for(var i=0;i<SLIDES.length;i++){
+  var s=SLIDES[i];
+  if(s.type==='cover') html+=renderCover();
+  else if(s.type==='keys') html+=renderKeys();
+  else if(s.type==='t') html+=renderTheory(s);
+  else html+=renderQ(s);
+}
+stage.innerHTML=html;
+var nodes=stage.querySelectorAll('.slide');
+
+/* ============================================================
+   NAVEGACIÓN
+   ============================================================ */
+var cur=0, forceReveal=false;
+var count=document.getElementById('count'), prog=document.getElementById('prog');
+
+function fit(el){
+  var body=el.querySelector('.body'); if(!body) return;
+  var wrap=body.querySelector('.fitwrap'); if(!wrap) return;
+  var maxK=(el.getAttribute('data-grow')==='1')?1.7:1;
+  var avail=body.clientHeight;
+  wrap.style.transform='none'; wrap.style.minHeight='0'; wrap.style.width='100%';
+  var k=1;
+  for(var i=0;i<6;i++){
+    var need=wrap.scrollHeight; if(!need) break;
+    var kn=avail/need;
+    if(kn>maxK) kn=maxK;
+    if(kn<.55) kn=.55;
+    if(Math.abs(kn-k)<.01){ k=kn; break; }
+    k=kn;
+    wrap.style.width=(100/k)+'%';
+  }
+  wrap.style.width=(100/k)+'%';
+  wrap.style.minHeight=(avail/k)+'px';
+  wrap.style.transform=(Math.abs(k-1)<.005)?'none':'scale('+k+')';
+}
+function show(i){
+  cur=Math.max(0,Math.min(SLIDES.length-1,i));
+  for(var j=0;j<nodes.length;j++) nodes[j].classList.toggle('on', j===cur);
+  var el=nodes[cur];
+  if(forceReveal) el.classList.add('revealed'); else el.classList.remove('revealed');
+  count.textContent=(cur+1)+' / '+SLIDES.length;
+  prog.style.width=((cur+1)/SLIDES.length*100)+'%';
+  fit(el);
+}
+function hasReveal(el){return !!el.querySelector('.reveal')}
+function next(){
+  var el=nodes[cur];
+  if(hasReveal(el) && !el.classList.contains('revealed')){ el.classList.add('revealed'); return; }
+  if(cur<SLIDES.length-1) show(cur+1);
+}
+function prev(){ if(cur>0) show(cur-1); }
+
+document.getElementById('next').onclick=next;
+document.getElementById('prev').onclick=prev;
+document.getElementById('revall').onclick=function(){
+  forceReveal=!forceReveal;
+  this.textContent=forceReveal?'Ocultar claves':'Mostrar todas las claves';
+  show(cur);
+};
+document.getElementById('fs').onclick=function(){
+  if(!document.fullscreenElement){ document.documentElement.requestFullscreen&&document.documentElement.requestFullscreen(); }
+  else { document.exitFullscreen&&document.exitFullscreen(); }
+};
+
+/* índice */
+var idx=document.getElementById('idx'), idxlist=document.getElementById('idxlist');
+var ihtml='';
+for(var k=0;k<SLIDES.length;k++){
+  var sl=SLIDES[k], lab, tag;
+  if(sl.type==='cover'){lab='Portada';tag='Inicio'}
+  else if(sl.type==='keys'){lab='Claves y cierre';tag='Cierre'}
+  else if(sl.type==='t'){lab=sl.titulo;tag=sl.bloque}
+  else {lab=sl.titulo;tag='Pregunta '+sl.n}
+  ihtml+='<button data-i="'+k+'"><b>'+tag+'</b>'+lab+'</button>';
+}
+idxlist.innerHTML=ihtml;
+idxlist.onclick=function(e){
+  var b=e.target.closest('button'); if(!b) return;
+  idx.classList.remove('on'); show(parseInt(b.dataset.i,10));
+};
+document.getElementById('openidx').onclick=function(){ idx.classList.toggle('on'); };
+
+document.addEventListener('keydown', function(e){
+  if(e.key==='Escape'){ idx.classList.remove('on'); return; }
+  if(e.key==='ArrowRight'||e.key===' '||e.key==='PageDown'){ e.preventDefault(); next(); }
+  else if(e.key==='ArrowLeft'||e.key==='PageUp'){ e.preventDefault(); prev(); }
+  else if(e.key==='Home'){ show(0); }
+  else if(e.key==='End'){ show(SLIDES.length-1); }
+  else if(e.key==='v'||e.key==='V'){ document.getElementById('revall').click(); }
+  else if(e.key==='i'||e.key==='I'){ idx.classList.toggle('on'); }
+  else if(e.key==='f'||e.key==='F'){ document.getElementById('fs').click(); }
+});
+
+stage.addEventListener('click', function(e){
+  var r=stage.getBoundingClientRect();
+  if((e.clientX-r.left)/r.width < .18) prev(); else next();
+});
+
+/* escalado del escenario */
+function resize(){
+  var s=Math.min((window.innerWidth-24)/1280, (window.innerHeight-64)/720);
+  stage.style.transform='scale('+s+')';
+  fit(nodes[cur]);
+}
+window.addEventListener('resize', resize);
+document.fonts && document.fonts.ready.then(function(){ resize(); show(cur); });
+resize(); show(0);
+</script>
+</body>
+</html>
